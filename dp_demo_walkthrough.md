@@ -86,12 +86,10 @@ This is the interactive front-end for demo presentations.
 - Live comparison of:
   - 🟢 **Baseline Accuracy**
   - 🛡️ **DP Accuracy** (changes with ε)
-- Popover dialog explaining **what ε is**
-- Labels for privacy strength (e.g., “Very Strong Privacy”)
+
 
 ### 📊 Purpose:
 - Make the accuracy vs privacy tradeoff visual
-- Explain ε to stakeholders in plain English
 - Show that Differential Privacy is measurable and tunable
 
 ---
