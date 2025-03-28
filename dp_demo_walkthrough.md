@@ -103,11 +103,3 @@ This is the interactive front-end for demo presentations.
 - **Differential Privacy is practical** — not just theory
 - **Baseline vs DP** comparison is key for understanding model hardening
 
----
-
-## Want More?
-
-Ask for:
-- A slide-ready summary
-- Exportable PDF or printable one-pager
-- GitHub README integration
