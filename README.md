@@ -10,13 +10,7 @@ The right number of epochs depends on your goal:
 
 
 📊 Final Results: DP vs Non-DP
-Metric	Differentially Private Model	Baseline Model (No DP)
-Accuracy	91.91%	97.86%
-Privacy Budget (ε)	1.28	❌ None (public risk)
-Noise Multiplier	1.1	N/A
-Epochs	15	15
-Dataset	MNIST	MNIST
-🔍 Takeaway
+
 You traded ~6% accuracy for strong privacy guarantee
 (ε = 1.28).
 
