@@ -41,16 +41,17 @@ Low ε: Answers are fuzzy, protecting privacy
 High ε: Answers are sharp but reveal more
 
 💡 Why Does the Privacy Budget Matter?
-Concern	How Privacy Budget Helps
-Regulatory Compliance	Helps meet GDPR, HIPAA, and CPRA “data minimization” & privacy-by-design requirements
-Risk Reduction	Even if model weights are leaked, DP mathematically guarantees no individual can be confidently reconstructed
-Trust & Transparency	You can quantify and report your privacy loss (e.g., “ε = 1.2 over 15 epochs”)
+
+Regulatory Compliance -	Helps meet GDPR, HIPAA, and CPRA “data minimization” & privacy-by-design requirements
+Risk Reduction - Even if model weights are leaked, DP mathematically guarantees no individual can be confidently reconstructed
+Trust & Transparency - You can quantify and report your privacy loss (e.g., “ε = 1.2 over 15 epochs”)
+
 🛡️ What are the Risks Without DP?
 Model inversion attacks can reconstruct training data (e.g., faces, health info).
 
 Membership inference attacks can reveal if a specific person was in the dataset.
 
-These are more likely in overfit models trained on sensitive or small datasets.
+
 
 🎯 When Should We Use Differential Privacy?
 You're training on sensitive data (medical, financial, location, etc.)
