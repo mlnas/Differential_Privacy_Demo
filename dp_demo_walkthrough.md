@@ -1,11 +1,11 @@
 
-# 🧪 Differential Privacy Demo – Walkthrough
+#  Differential Privacy Demo – Walkthrough
 
 This walkthrough explains how the DP demo is structured and what each component does.
 
 ---
 
-## 📁 Files Overview
+##  Files Overview
 
 You have two main model training scripts:
 
@@ -18,7 +18,7 @@ And a visual React demo file:
 
 ---
 
-## ✅ Baseline Model (`baseline_model.py`)
+##  Baseline Model (`baseline_model.py`)
 
 This is a standard training script for the MNIST dataset.
 
@@ -38,18 +38,18 @@ This is a standard training script for the MNIST dataset.
   - `Adam` optimizer
 - Trains using `.fit()` and evaluates accuracy on the test set
 
-### ✅ Result:
+###  Result:
 - **High accuracy (~97.86%)**
 - **No privacy protection**
 - Represents a best-case performance baseline
 
 ---
 
-## 🛡️ DP Model (`dp_model.py`)
+##  DP Model (`dp_model.py`)
 
 This version uses Differential Privacy to protect individual training examples.
 
-### 🔐 What It Changes:
+###  What It Changes:
 - Uses `DPKerasSGDOptimizer`:
   ```python
   DPKerasSGDOptimizer(
@@ -77,24 +77,7 @@ This version uses Differential Privacy to protect individual training examples.
 
 ---
 
-## 🎛️ React Visual Demo (`dp_demo.jsx`)
-
-This is the interactive front-end for demo presentations.
-
-### ✨ Features:
-- Slider to adjust ε (epsilon) in real time
-- Live comparison of:
-  - 🟢 **Baseline Accuracy**
-  - 🛡️ **DP Accuracy** (changes with ε)
-
-
-### 📊 Purpose:
-- Make the accuracy vs privacy tradeoff visual
-- Show that Differential Privacy is measurable and tunable
-
----
-
-## 🧠 What the Demo Teaches
+## What the Demo Shows
 
 - **Privacy–Accuracy Tradeoff** is real and tunable
 - **ε (Epsilon)** is a measurable privacy budget
