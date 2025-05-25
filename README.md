@@ -1,4 +1,4 @@
-# Differential Privacy (DP) – README
+# Differential Privacy (DP)
 
 This repository explains **Differential Privacy (DP)** and how to use it effectively in machine learning projects.  
 
