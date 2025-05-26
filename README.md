@@ -11,7 +11,7 @@ It covers:
 - How many epochs to train for based on your goals
 - Final performance tradeoffs
 
-1. What is Differential Privacy?
+ What is Differential Privacy?
 -------------------------------
 Differential Privacy is a mathematically rigorous framework that adds statistical noise during data processing or model training to protect any individual's presence in the dataset — even if an attacker has background knowledge.
 
@@ -20,7 +20,7 @@ Key idea: The model shouldn't "remember" who was in the training data.
 > **Where is the noise added?**
 > In most modern machine learning, DP works by adding noise to the model's learning process (the gradients), not to the data itself. This helps the model learn general patterns without memorizing details about any individual.
 
-2. What is ε (Epsilon) — the Privacy Budget?
+ What is ε (Epsilon) — the Privacy Budget?
 --------------------------------------------
 ε (epsilon) is the privacy budget — it defines how much information your model is allowed to leak about any single individual.
 
@@ -50,7 +50,7 @@ Without Differential Privacy, your model can be vulnerable to:
 - Membership Inference Attacks — Was this specific person in the dataset?
 - Model Inversion Attacks — Can we reconstruct someone's face or record from model outputs?
 
-3. When Should You Use Differential Privacy?
+ When Should You Use Differential Privacy?
 --------------------------------------------
 Apply DP when:
 
@@ -58,7 +58,7 @@ Apply DP when:
 - You need provable privacy guarantees
 - Preparing for compliance audits (governments & regulated sectors increasingly recommend DP)
 
-4. DP vs Encryption
+ DP vs Encryption
 -------------------
 | Encryption         | Differential Privacy                                 |
 |-------------------|-----------------------------------------------------|
@@ -76,7 +76,7 @@ Encryption + DP form a complete data protection stack.
 > - **Membership Inference Attacks:** These attacks try to determine if a specific person's data was included in the training set. DP makes this extremely difficult by ensuring that the model's outputs are nearly the same whether or not any one individual is in the data.
 > - **Model Inversion Attacks:** These attacks attempt to reconstruct sensitive information (like an image or a record) from the model. DP's noise prevents the model from retaining enough detail to allow such reconstructions, protecting individual privacy even if the model is shared or exposed.
 
-5. How Many Epochs Should You Train?
+ How Many Epochs Should You Train?
 ------------------------------------
 | Goal                   | Epochs | Why                                             |
 |------------------------|--------|-------------------------------------------------|
@@ -85,20 +85,20 @@ Encryption + DP form a complete data protection stack.
 | Privacy budget focus   | 3–10   | Keep ε lower while showing some learning        |
 | Real performance       | 15–30  | Push for highest accuracy (ε rises too)         |
 
-6. Final Results – DP vs Non-DP
+ Final Results – DP vs Non-DP
 -------------------------------
 In practice, using DP typically trades a small percentage of accuracy (e.g., ~6%) for strong privacy guarantees (e.g., ε = 1.28).
 
 This makes DP practical and powerful, especially in industries where user trust and data privacy are non-negotiable.
 
-7. DP in Practice: Libraries and Tools
+ DP in Practice: Libraries and Tools
 --------------------------------------
 Major machine learning libraries support DP, making it accessible to practitioners:
 - **TensorFlow Privacy** (for TensorFlow)
 - **Opacus** (for PyTorch)
 - **Diffprivlib** (for scikit-learn)
 
-8. Visualizing the Privacy-Accuracy Tradeoff
+ Visualizing the Privacy-Accuracy Tradeoff
 --------------------------------------------
 A simple chart or diagram can help illustrate how increasing privacy (lower ε) typically reduces accuracy, and vice versa. This repository includes example visualizations to help communicate this tradeoff.
 
