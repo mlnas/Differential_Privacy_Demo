@@ -69,6 +69,13 @@ Apply DP when:
 Combined:
 Encryption + DP form a complete data protection stack.
 
+> **How does DP protect what the model learns and remembers?**
+> Differential Privacy works by adding carefully calibrated noise to the model's learning process. This means the model can learn general patterns from the data, but it cannot memorize or reveal details about any specific individual. Even if someone examines the model closely, they cannot confidently determine whether any particular person's data was used during training.
+>
+> **How does DP defend against membership and inversion attacks?**
+> - **Membership Inference Attacks:** These attacks try to determine if a specific person's data was included in the training set. DP makes this extremely difficult by ensuring that the model's outputs are nearly the same whether or not any one individual is in the data.
+> - **Model Inversion Attacks:** These attacks attempt to reconstruct sensitive information (like an image or a record) from the model. DP's noise prevents the model from retaining enough detail to allow such reconstructions, protecting individual privacy even if the model is shared or exposed.
+
 5. How Many Epochs Should You Train?
 ------------------------------------
 | Goal                   | Epochs | Why                                             |
